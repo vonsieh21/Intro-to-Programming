@@ -1,0 +1,31 @@
+import java.util.Scanner; //import java util
+
+public class Exercise03_11 {  //class name
+  public static void main(String[] args) { //main method
+    Scanner scan = new Scanner(System.in);  //declare scan as the input variable
+    
+    System.out.println("Enter a month in a year (e.g., 1 for Jan): ");
+    int month = scan.nextInt();  //outputs the inuput
+    System.out.println("Enter a year: ");
+    int year = scan.nextInt();  //outputs the input
+    
+    boolean leapYear = (year % 4 == 0 && year % 100 != 0) || (year % 400 == 0);  //determine if the year is a leapyear or not
+    
+    switch(month) {  //switch method is used by using the month value
+      case 1: System.out.println("January " + year + " had 31 days"); break; //nested if statement to better understand and shorten code
+			case 2: System.out.println("February " + year + " had" + ((leapYear) ? " 29 days" : " 28 days")); break;  
+      //^^I use "?" to determine if the leapyear is true or false, if false outputs the other statement^^
+			case 3: System.out.println("March " + year + " had 31 days"); break;
+			case 4: System.out.println("April " + year + " had 30 days"); break;
+			case 5: System.out.println("May " + year + " had 31 days"); break;
+			case 6: System.out.println("June " + year + " had 30 days"); break;
+			case 7: System.out.println("July " + year + " had 31 days"); break;
+			case 8: System.out.println("August " + year + " had 31 days"); break;
+			case 9: System.out.println("September " + year + " had 30 days"); break;
+			case 10: System.out.println("October " + year + " had 31 days"); break;
+			case 11: System.out.println("November " + year + " had 30 days"); break;
+			case 12: System.out.println("December " + year + " had 31 days");
+      
+    }
+  }
+}
